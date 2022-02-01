@@ -1,44 +1,26 @@
 for i in range(4):
-    area = []
-    area2 = []
-    dot = []
-    dot2 = []
+    x,y,p,q,x2,y2,p2,q2 = map(int,input().split())
 
-    x,y,p,q,x2,y2,p2,q2 = map(int, input().split())
-
-    for i in range(0, p-x):
-        for j in range(0, q-y):
-            area.append((p-i,q-j))
-    for i in [x,p]:
-        for j in range(y,q+1):
-            dot.append((i,j))
-    for i in [y,q]:
-        for j in range(x,p+1):
-            dot.append((j,i))
-
-    for i in range(0, p2-x2):
-        for j in range(0, q2-y2):
-            area2.append((p2-i,q2-j))
-    for i in [x2,p2]:
-        for j in range(y2,q2+1):
-            dot2.append((i,j))
-    for i in [y2,q2]:
-        for j in range(x2,p2+1):
-            dot2.append((j,i))
-
-
-    a = len(set(area))
-    b = len(set(area)-set(area2))
-    c = len(set(dot))
-    d = len(set(dot)-set(dot2))
-
-    if a != b:
-        print('a')
-    elif c != d:
-        if c == (d + 1):
-            print('c')
-        else:
+    if x>x2:
+        x,x2 = x2,x
+        y,y2 = y2,y
+        p,p2 = p2,p
+        q,q2 = q2,q
+        
+    if x2<p:
+        if q2>y and q>y2:
+            print('a')
+        elif q==y2 or q2==y:
             print('b')
+        else:
+            print('d')
+    elif x2==p:
+        if q2==y or q==y2:
+            print('c')
+        elif q2>y and q>y2:
+            print('b')
+        else:
+            print('d')
     else:
         print('d')
-
+    
