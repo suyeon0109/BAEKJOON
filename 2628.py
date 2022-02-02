@@ -14,22 +14,19 @@ for i in range(n):
 # 이를 lines라는 새로운 리스트로 정의
 lines = sorted(list_line, key = lambda x: x[1])
 
-# lines 리스트에서 for문을 돌리면서
-# 1) 가로 혹은 세로를 판별 후
-# 2) 작은 점선번호부터 자른다. -> 조각의 길이가 정해진다.
-# 3) 생성된 조각의 길이를 새로운 리스트 list_height, list_width에 저장.
+
 h = 0
 w = 0
 list_height = []
 list_width = []
-for line in lines:
+for line in lines:                    # # lines 리스트에서 for문을 돌리면서
     if line[0] == 0:                  # 1) 가로 혹은 세로를 판별
         list_height.append(line[1]-h) # 2) 작은 점선번호부터 자른다. -> 조각의 길이가 정해진다.
         h = line[1]
     else:
         list_width.append(line[1]-w)
         w = line[1]
-list_height.append(height-h)
+list_height.append(height-h)   # 3) 생성된 조각의 길이를 새로운 리스트 list_height, list_width에 저장.
 list_width.append(width-w)
 
 # 조각의 길이들을 이용해 각각의 조각의 넓이를 구해
