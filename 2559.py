@@ -8,3 +8,5 @@ for i in range(len(seq)-K):
     sum_n = sum_n+seq[K+i]-seq[i]
     
 print(max_n)
+
+

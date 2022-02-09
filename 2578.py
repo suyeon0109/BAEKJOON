@@ -41,6 +41,8 @@ for num in delete:
         break
 
 print(cnt)
+
+
     
 
     

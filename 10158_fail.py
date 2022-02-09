@@ -9,7 +9,6 @@ def walk_y(n):
     return n + 1
 
 for i in range(e):
-
     if c == a :
         def walk_x(n):
             return n - 1
@@ -35,5 +34,4 @@ for i in range(e):
         n += 1
     else:
         d = walk_y(d)
-
 print(c,d)

@@ -1,7 +1,6 @@
 C, R = map(int,input().split())
 number = int(input())
 
-
 x,y = 1,0
 cnt = 0
 sit = {}
@@ -13,14 +12,11 @@ while R!=0 and C!=0:
         cnt +=1
         y += (-1)**j
         sit[cnt]=f'{x} {y}'
-  
-
 
     for i in range(1,C):
         cnt += 1
         x += (-1)**j
         sit[cnt]=f'{x} {y}'
-
 
     j += 1
     C -= 1
@@ -30,3 +26,4 @@ try:
     print(sit[number])
 except:
     print('0')
+    
