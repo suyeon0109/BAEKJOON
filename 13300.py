@@ -1,7 +1,8 @@
 import math
 
 N, K = map(int, input().split())
-d1={1:[], 2:[], 3:[], 4:[], 5:[], 6:[]}
+d1 = {1:[], 2:[], 3:[], 4:[], 5:[], 6:[]}
+
 for i in range(N):
     a,b = map(int, input().split())
     d1[b].append(a)

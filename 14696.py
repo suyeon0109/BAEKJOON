@@ -13,7 +13,6 @@ for i in range(n):
         elif lB[i]>lA[i]:
             print('B')
             break
-        else:
-            pass
+
     if lA == lB:
         print('D')

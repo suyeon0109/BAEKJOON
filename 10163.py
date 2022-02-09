@@ -1,5 +1,6 @@
 T = int(input())
 d1 = {}
+
 for i in range(T):
     a,b,c,d = map(int, input().split())
     for j in range(c):
@@ -8,10 +9,13 @@ for i in range(T):
                 pass
             else:
                 d1[(a+j,b+k)] = i
-           
-l1 = list(d1.values())
-print(l1)
-for i in range(T):
-    print(l1.count(i))
+
+# d1 = {(0,0) : 0, (0,1) : 0,  ,,,  (3,3) : 1,  ,,,, }
+for m in range(T):
+    cnt = 0
+    for key, value in d1.items():
+        if value == m:
+            cnt += 1
+    print(cnt)
 
 
