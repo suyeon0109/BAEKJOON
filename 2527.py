@@ -7,17 +7,17 @@ for i in range(4):
         p,p2 = p2,p
         q,q2 = q2,q
         
-    if x2<p:
-        if q2>y and q>y2:
+    if x2 < p:
+        if q2 > y and q > y2:
             print('a')
-        elif q==y2 or q2==y:
+        elif q == y2 or q2 == y:
             print('b')
         else:
             print('d')
-    elif x2==p:
-        if q2==y or q==y2:
+    elif x2 == p:
+        if q2 == y or q == y2:
             print('c')
-        elif q2>y and q>y2:
+        elif q2 > y and q > y2:
             print('b')
         else:
             print('d')
