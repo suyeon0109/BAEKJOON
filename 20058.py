@@ -25,12 +25,12 @@ for z in range(Q):
     t = 0
     p = 0
     n = 2**L[z]
-    for _ in range(M//n): # 1
+    for _ in range(M//n): 
         for _ in range(M//n):
             r= 0
-            for i in range(p,p+n//2): # 0,1
+            for i in range(p,p+n//2): 
                 c = n-1-2*(i%n)
-                for j in range(t+i%n,t+n-1-i%n): # 0,1 / 2,3
+                for j in range(t+i%n,t+n-1-i%n): 
                     ice[i][j], ice[i+r][j+c], ice[i+r+c][j+c-r], ice[i+c][j-r] = ice[i+c][j-r], ice[i][j], ice[i+r][j+c], ice[i+r+c][j+c-r]
                     r += 1
                     c -= 1
