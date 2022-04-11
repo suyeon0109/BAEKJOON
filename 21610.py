@@ -7,13 +7,16 @@ cloud = [[N-1,0], [N-1,1], [N-2,0], [N-2,1]]
 grnd = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 
 for _ in range(M):
+
     excpt = [[0]*N for _ in range(N)] 
     d,s = map(int, sys.stdin.readline().split())
 
+    # 구름 이동
     for p in cloud:
         p[0] = (p[0] + dx[d]*s) % N
         p[1] = (p[1] + dy[d]*s) % N
-
+    
+    # 물의양 증가
     for p in cloud:
         grnd[p[0]][p[1]] += 1
         excpt[p[0]][p[1]] = 1
