@@ -1,4 +1,8 @@
-import sys
+import datetime
+import time
 
-n = int(sys.stdin.readline())
-print(n)
+dt_utc = datetime.datetime.utcnow()
+print(dt_utc)
+
+today = time.strftime('%d')
+print(today)

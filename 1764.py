@@ -10,6 +10,7 @@ for _ in range(N):
 for _ in range(M):
     bo.append(input())
 
+# set 교집합 연산
 jab = list(set(dud) & set(bo))
 jab.sort()
 print(len(jab))
