@@ -16,8 +16,9 @@ for _ in range(m):
             if la[b] == 0:
                 la[b] = la[a]
             else:
+                t = la[b]
                 for j in range(n+1):
-                    if la[j] == la[b]:
+                    if la[j] == t:
                         la[j] = la[a]
     
     if c == 1:
@@ -28,6 +29,33 @@ for _ in range(m):
         else:
             print('YES')
     
-    print(la)
-    
     k += 1
+
+
+# n, m = map(int, input().split())
+
+# la = [i for i in range(n+1)]
+
+# def union(a,b):
+#     if a <= b:
+#         la[b] = la[a]
+#     else:
+#         la[a] = la[b]
+
+# def find(a,b):
+#     if a <= b:
+#         return la[b]
+#     if la[a] == la[b]:
+#         return 'YES'
+#     else:
+#         return 'NO'
+
+# for _ in range(m):
+#     c, a, b = map(int, input().split())
+
+#     if c == 0:
+#         union(a,b)
+#     else:
+#         print(find(a,b))
+    
+#     print(la)

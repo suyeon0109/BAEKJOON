@@ -1,3 +1,5 @@
+# 세그먼트 트리
+
 N, M, K = map(int, input().split())
 la = [int(input()) for _ in range(N)]
 

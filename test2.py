@@ -1,11 +1,11 @@
-from collections import deque
+N = int(input())
 
-
-la = [[1,2,3], [4,5,6], [7,8,9]]
-tmp = deque()
-
-for i in zip(*la):
-    print(i)
-    tmp.appendleft(i)
-
-print(tmp)
+def ans(N):
+    if N < 100:
+        return N
+    elif 100 <= N <= 110:
+        return 99
+    else:
+        start = 111
+        
+        for i in range(111, N):

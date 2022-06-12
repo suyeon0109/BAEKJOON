@@ -22,6 +22,7 @@ if s > M:
             s += N - tree
             height -= 1
             break
+        
 elif s < M:
     height = la[0]
     while s < M:
