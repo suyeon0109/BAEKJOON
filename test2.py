@@ -1,6 +1,11 @@
-a,b = 1,1
-c,d = 1,3
-e,f = 2,4
+from collections import deque
 
-if (d-b)/(c-a) > (f-d)/(e-c):
-    print('!!')
+
+R = deque()
+S = deque()
+
+R.append(1)
+S.append(4)
+R.extend(S)
+
+print(R)
