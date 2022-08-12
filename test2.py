@@ -1,2 +1,7 @@
-d1 = {1:'1', 2:'2'}
-print(len(d1))
+from collections import deque
+
+
+la = deque([1,2,3,1])
+la = list(la)
+la = la[:2]
+print(la)
